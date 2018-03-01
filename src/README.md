@@ -45,14 +45,14 @@ Opcode | Type | C Pseudo | Explanation
 00EE   | Flow |	return;	 | Returns from a subroutine.
 1NNN   | Flow	| goto NNN;| Jumps to address NNN.
 2NNN   | Flow	| *(0xNNN)() | Calls subroutine at NNN.
-3XNN   | Cond	| if(Vx==NN) | Skips the next instruction if VX equals NN. (Usually the next instruction is a jump to skip a code block)
-4XNN   | Cond	| if(Vx!=NN) | Skips the next instruction if VX doesn't equal NN. (Usually the next instruction is a jump to skip a code block)
-5XY0	 | Cond	| if(Vx==Vy) | Skips the next instruction if VX equals VY. (Usually the next instruction is a jump to skip a code block)
+3XNN   | Cond	| if (Vx == NN) | Skips the next instruction if VX equals NN. (Usually the next instruction is a jump to skip a code block)
+4XNN   | Cond	| if (Vx != NN) | Skips the next instruction if VX doesn't equal NN. (Usually the next instruction is a jump to skip a code block)
+5XY0	 | Cond	| if (Vx == Vy) | Skips the next instruction if VX equals VY. (Usually the next instruction is a jump to skip a code block)
 6XNN	 | Const|	Vx = NN	   | Sets VX to NN.
 7XNN	 | Const|	Vx += NN	 | Adds NN to VX. (Carry flag is not changed)
-8XY0	 | Assign |	Vx=Vy	   | Sets VX to the value of VY.
-8XY1	 | BitOp|	Vx=Vx      | Vy	Sets VX to VX or VY. (Bitwise OR operation)
-8XY2	 | BitOp|	Vx=Vx&Vy   | Sets VX to VX and VY. (Bitwise AND operation)
+8XY0	 | Assign |	Vx = Vy	   | Sets VX to the value of VY.
+8XY1	 | BitOp|	Vx = Vx \| |Vy	Sets VX to VX or VY. (Bitwise OR operation)
+8XY2	 | BitOp|	Vx = Vx & Vy   | Sets VX to VX and VY. (Bitwise AND operation)
 8XY3	 | BitOp|	Vx=Vx^Vy	|Sets VX to VX xor VY.
 8XY4	 | Math	|Vx += Vy	|Adds VY to VX. VF is set to 1 when there's a carry, and to 0 when there isn't.
 8XY5	 | Math	|Vx -= Vy	|VY is subtracted from VX. VF is set to 0 when there's a borrow, and 1 when there isn't.
