@@ -12,7 +12,7 @@ LDFLAGS	=	-lsfml-graphics \
 		-lsfml-window \
 		-lsfml-system
 
-OBJ	=	$(SRC:.c=.o)
+OBJ	=	$(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
 	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
