@@ -38,8 +38,8 @@ CHIP-8 has 35 opcodes, which are all two bytes long and stored big-endian. The o
 * PC : Program Counter
 * I : 16bit register (For memory address) (Similar to void pointer)
 
-Opcode | Type | C Pseudo | Explanation
--------|------|----------|------------
+Opcode|Type|C Pseudo|Explanation
+--|------|----------|------------
 0NNN | Call |          | Calls RCA 1802 program at address NNN. Not necessary for most ROMs.
 00E0   | Display | disp_clear() | Clears the screen.
 00EE   | Flow |	return;	 | Returns from a subroutine.
