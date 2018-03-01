@@ -40,13 +40,13 @@ CHIP-8 has 35 opcodes, which are all two bytes long and stored big-endian. The o
 
 Opcode|Type|C Pseudo|Explanation
 --|------|----------|------------
-0NNN | Call |          | Calls RCA 1802 program at address NNN. Not necessary for most ROMs.
-00E0   | Display | disp_clear() | Clears the screen.
-00EE   | Flow |	return;	 | Returns from a subroutine.
-1NNN	 | Flow	| goto NNN;| Jumps to address NNN.
-2NNN	 | Flow	| *(0xNNN)() | Calls subroutine at NNN.
-3XNN	 | Cond	| if(Vx==NN) | Skips the next instruction if VX equals NN. (Usually the next instruction is a jump to skip a code block)
-4XNN	 | Cond	| if(Vx!=NN) | Skips the next instruction if VX doesn't equal NN. (Usually the next instruction is a jump to skip a code block)
+0NNN| Call |          | Calls RCA 1802 program at address NNN. Not necessary for most ROMs.
+00E0| Display | disp_clear() | Clears the screen.
+00EE| Flow |	return;	 | Returns from a subroutine.
+1NNN| Flow	| goto NNN;| Jumps to address NNN.
+2NNN| Flow	| *(0xNNN)() | Calls subroutine at NNN.
+3XNN| Cond	| if(Vx==NN) | Skips the next instruction if VX equals NN. (Usually the next instruction is a jump to skip a code block)
+4XNN| Cond	| if(Vx!=NN) | Skips the next instruction if VX doesn't equal NN. (Usually the next instruction is a jump to skip a code block)
 5XY0	Cond	if(Vx==Vy)	Skips the next instruction if VX equals VY. (Usually the next instruction is a jump to skip a code block)
 6XNN	Const	Vx = NN	Sets VX to NN.
 7XNN	Const	Vx += NN	Adds NN to VX. (Carry flag is not changed)
