@@ -40,7 +40,7 @@ CHIP-8 has 35 opcodes, which are all two bytes long and stored big-endian. The o
 
 Opcode | Type | C Pseudo | Explanation
 -------|------|----------|------------
-0NNN   | Call |          | Calls RCA 1802 program at address NNN. Not necessary for most ROMs.
+0NNN | Call |          | Calls RCA 1802 program at address NNN. Not necessary for most ROMs.
 00E0   | Display | disp_clear() | Clears the screen.
 00EE   | Flow |	return;	 | Returns from a subroutine.
 1NNN	 | Flow	| goto NNN;| Jumps to address NNN.
