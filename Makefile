@@ -1,6 +1,6 @@
 NAME	=	chip8
 
-SRC	=	src/main.cpp
+SRC	=	src/main.cpp src/Chip8.cpp
 
 CXXFLAGS =	-I./include \
 		-W -Wall -Werror -Wextra \
